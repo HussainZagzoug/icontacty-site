@@ -15,13 +15,14 @@
   a { color: var(--accent); }
   hr { border: 0; border-top: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); margin: 48px 0; }
   [lang="en"] { direction: ltr; text-align: left; }
+  li { margin: 4px 0; }
 </style>
 </head>
 <body>
 <main>
   <article>
     <h1>سياسة الخصوصية</h1>
-    <p class="sub">تطبيق «أسمائي» (iContacty) — آخر تحديث: 16 أكتوبر 2026</p>
+    <p class="sub">تطبيق «أسمائي» (iContacty) — آخر تحديث: 23 أكتوبر 2026</p>
 
     <h2>ما الذي يصل إليه التطبيق</h2>
     <p>يقرأ التطبيق جهات الاتصال التي تسمح بها: جهات اتصال الآيفون عبر إذن iOS، وجهات اتصال حساب Google الذي تسجّل به داخل التطبيق عبر Google People API بصلاحية <code>contacts</code>. يشمل ذلك الأسماء والأرقام والإيميلات والشركات والصور والمجموعات (التصنيفات).</p>
@@ -31,6 +32,18 @@
 
     <h2>أين تُحفظ البيانات</h2>
     <p>تتم كل المعالجة على جهازك. التطبيق لا يملك أي خادم، ولا يرسل جهات اتصالك لأي جهة غير Apple (جهات اتصال الآيفون) وGoogle (حسابك نفسه) عند حفظ التغييرات التي طلبتها. نسخ التراجع الاحتياطية تُحفظ على جهازك فقط، وتُحذف عند حذف السجل أو بعد المدة التي تختارها في الإعدادات. رمز الدخول إلى Google يُحفظ في سلسلة المفاتيح (Keychain) على جهازك.</p>
+
+    <h2>حماية البيانات</h2>
+    <p>نحمي بياناتك الحساسة (جهات الاتصال ورموز الدخول) بهذه الوسائل:</p>
+    <ul>
+      <li><strong>التشفير أثناء النقل:</strong> كل الاتصال بـ Google يتم عبر HTTPS (TLS) فقط، ولا يسمح التطبيق بأي اتصال غير مشفّر.</li>
+      <li><strong>تسجيل دخول آمن:</strong> يتم الدخول إلى Google عبر صفحة Google الرسمية باستخدام OAuth 2.0 مع PKCE، فلا يرى التطبيق كلمة مرورك ولا يحفظها أبداً.</li>
+      <li><strong>تشفير الرموز على الجهاز:</strong> رمز الدخول يُحفظ في سلسلة المفاتيح (Keychain) المشفّرة من iOS، مقيّداً بهذا الجهاز فقط، فلا يُنقل لأجهزة أخرى ولا يدخل في النسخ الاحتياطية.</li>
+      <li><strong>تشفير الملفات المحفوظة:</strong> نسخ التراجع الاحتياطية تُحفظ داخل التطبيق بحماية البيانات الكاملة في iOS (Complete File Protection)، فتبقى مشفّرة ولا يمكن قراءتها والجهاز مقفل.</li>
+      <li><strong>لا خوادم ولا تخزين سحابي لدينا:</strong> لا نجمع بياناتك على أي خادم، فلا توجد قاعدة بيانات لدينا يمكن تسريبها.</li>
+      <li><strong>أقل صلاحيات ممكنة:</strong> نطلب صلاحية جهات الاتصال فقط، ولا نصل لأي بيانات أخرى في حسابك.</li>
+      <li><strong>تحكمك الكامل:</strong> لا يُحفظ أي تغيير قبل موافقتك، ويمكنك التراجع من السجل، وتسجيل الخروج يلغي الرمز ويحذفه من جهازك فوراً.</li>
+    </ul>
 
     <h2>المشاركة</h2>
     <p>لا نبيع بياناتك ولا نشاركها ولا نستخدمها للإعلانات أو لتدريب نماذج الذكاء الاصطناعي، ولا ننقلها لأي طرف ثالث. لا يحتوي التطبيق على أدوات تتبّع أو تحليلات.</p>
@@ -49,7 +62,7 @@
 
   <article lang="en" id="en">
     <h1>Privacy Policy</h1>
-    <p class="sub">iContacty — Last updated: October 16, 2026</p>
+    <p class="sub">iContacty — Last updated: October 23, 2026</p>
 
     <h2>What the app accesses</h2>
     <p>The app reads the contacts you allow: the iPhone's contacts through iOS permission, and the contacts of any Google account you sign in with inside the app, through the Google People API with the <code>contacts</code> scope. This includes names, phone numbers, emails, companies, photos and groups (labels).</p>
@@ -59,6 +72,18 @@
 
     <h2>Where the data is kept</h2>
     <p>All processing happens on your device. The app has no server and sends your contacts to no one other than Apple (iPhone contacts) and Google (your own account) when saving the changes you asked for. Undo backups are stored only on your device and are deleted when you clear History or after the period you choose in Settings. The Google sign-in token is stored in the device Keychain.</p>
+
+    <h2>Data protection</h2>
+    <p>We protect your sensitive data (contacts and sign-in tokens) with the following mechanisms:</p>
+    <ul>
+      <li><strong>Encryption in transit:</strong> all communication with Google uses HTTPS (TLS) only; the app allows no unencrypted connections.</li>
+      <li><strong>Secure sign-in:</strong> you sign in on Google's own page using OAuth 2.0 with PKCE, so the app never sees or stores your Google password.</li>
+      <li><strong>Encrypted token storage:</strong> the sign-in token is stored in the encrypted iOS Keychain, restricted to this device only, so it is never synced to other devices or included in backups.</li>
+      <li><strong>Encryption at rest:</strong> undo backups are saved in the app's private container with iOS Complete File Protection, so they stay encrypted and unreadable while the device is locked.</li>
+      <li><strong>No servers or cloud storage of our own:</strong> we do not collect your data on any server, so there is no database of ours that could be breached.</li>
+      <li><strong>Least privilege:</strong> the app requests only the contacts scope and accesses no other data in your account.</li>
+      <li><strong>User control:</strong> no change is saved without your approval, every change can be undone from History, and signing out revokes the token and deletes it from your device immediately.</li>
+    </ul>
 
     <h2>Sharing</h2>
     <p>We do not sell, share or use your data for advertising or to train AI models, and we do not transfer it to any third party. The app contains no tracking or analytics.</p>
